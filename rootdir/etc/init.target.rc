@@ -137,6 +137,9 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
+    # Freezer setup
+    write /dev/freezer/frozen/freezer.killable 1
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
