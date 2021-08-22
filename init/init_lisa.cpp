@@ -63,6 +63,16 @@ void set_ro_build_prop(const string &source, const string &prop,
     property_override(prop_name.c_str(), value.c_str());
 }
 
+static const char *build_keys_props[] =
+{
+    "ro.build.tags",
+    "ro.odm.build.tags",
+    "ro.product.build.tags",
+    "ro.system.build.tags",
+    "ro.system_ext.build.tags",
+    "ro.vendor.build.tags",
+    nullptr};
+
 void set_device_props(const string model, const string name, const string marketname) {
     // list of partitions to override props
     string source_partitions[] = { "", "bootimage.", "odm.", "product.",
@@ -77,6 +87,12 @@ void set_device_props(const string model, const string name, const string market
 
 void vendor_load_properties()
 {
+    /* Spoof Build keys */
+    for (int i = 0; build_keys_props[i]; ++i)
+    {
+        property_override(build_keys_props[i], "release-keys");
+    }
+
     // Detect device and configure properties
     string region = GetProperty("ro.boot.hwc", "");
 
