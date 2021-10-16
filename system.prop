@@ -59,3 +59,6 @@ ril.subscription.types=NV,RUIM
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# System Server
+arm64.memtag.process.system_server=off
