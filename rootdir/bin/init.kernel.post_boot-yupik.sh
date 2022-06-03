@@ -151,6 +151,9 @@ echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus
 
+# Disable cdsprpcd daemon
+setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+
 # configure governor settings for silver cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
