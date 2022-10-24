@@ -75,7 +75,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
 
 # Call the MiuiCamera setup
-$(call inherit-product-if-exists, vendor/xiaomi/lisa-miuicamera/products/miuicamera.mk)
+$(call inherit-product-if-exists, vendor/lisa-miuicamera/products/miuicamera.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \

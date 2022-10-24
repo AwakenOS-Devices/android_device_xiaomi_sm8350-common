@@ -232,4 +232,4 @@ CONFIG_IEEE80211AX := true
 include vendor/xiaomi/sm8350-common/BoardConfigVendor.mk
 
 # Inherit MIUI Camera
--include vendor/xiaomi/lisa-miuicamera/products/board.mk
+-include vendor/lisa-miuicamera/products/board.mk
