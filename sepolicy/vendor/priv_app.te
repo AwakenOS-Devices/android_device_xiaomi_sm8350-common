@@ -1,0 +1,2 @@
+allow priv_app hal_mlipay_hwservice:hwservice_manager find;
+allow priv_app hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
